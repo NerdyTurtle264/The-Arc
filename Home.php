@@ -6,58 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
-<!-- Top Navigation section-->
-<nav class="w3-bar" style="background-color:#578CA9">
-  <a href="#" class="w3-bar-item w3-button w3-green">Home</a>
-  <div class="w3-hide-small w3-hide-medium">
-    <!-- copy "<a href="#" class="w3-bar-item w3-button">Text</a>" 
-         to make more nav items-->
-    <a href="#" class="w3-bar-item w3-button">Services</a>
-    <a href="#" class="w3-bar-item w3-button">Employment Opportunities</a>
-    <a href="#" class="w3-bar-item w3-button">Contact Us</a>
-    <a href="#" class="w3-bar-item w3-button">Arc Day Camp</a>
-    <div class="w3-dropdown-hover">
-      <button class="w3-button">Dropdown</button>
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-      </div>
-    </div>
-    <div class="w3-right">
-      <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
-      <a href="#" class="w3-bar-item w3-button w3-green ">Go</a>
-      </div?>
-    </div>
-  </div>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="MobileDropFunc()">&#9776;</a>
-</nav>
-<!-- End of Top Navigation bar section -->
-
-<!-- Mobile Navigation bar section 
-If editing the Top Nav to add content need to do it here too.
-Uses accordian instead of drop down so no content is hidden below for tablet and phone
-users-->
-<div id="MobileNav" class="w3-bar-block w3-hide w3-hide-large w3-center" style="background-color:#578CA9">
-  <a href="#" class="w3-bar-item w3-button">Services</a>
-  <a href="#" class="w3-bar-item w3-button">Employment Opportunities</a>
-  <a href="#" class="w3-bar-item w3-button">Contact Us</a>
-  <a href="#" class="w3-bar-item w3-button">Arc Day Camp</a>
-  <div class="w3-bar-item w3-button" onclick="MobileAccFunc()">
-    <button class="w3-button">Accordion<div>v</div></button>
-    <div id="MobileNavAcc" class="w3-hide">
-      <a href="#" class="w3-bar-item w3-button">Link 1</a>
-      <a href="#" class="w3-bar-item w3-button">Link 2</a>
-      <a href="#" class="w3-bar-item w3-button">Link 3</a>
-    </div>
-  </div>
-  <div>
-    <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
-    <a href="#" class="w3-bar-item w3-button w3-green">Go</a>
-    </div?>
-  </div>
-</div>
-<!-- End of Mobile Navigation bar section -->
+<?php include("includes/navigation.html");?>
 
 <!-- Beginning of actual content -->
 <div class="w3-row">
@@ -103,36 +52,6 @@ users-->
 <hr>
 <!-- Ending of content -->
 
-<!-- Beginning of footer section -->
-<footer class="w3-row w3-center" style="background-color:#578CA9">
-  <div class="w3-content">
-    <div class="w3-half">
-      <img src="http://www.thearcclarion.org/uploads/1/3/1/3/13139352/1743726_orig.png" class="w3-round w3-image" alt="The Arc logo" style="width:100%"></img>
-    </div>
-    <div class="w3-half">
-      <h6>
-        (814) 226-7033<br> lzacherl@thearcclarion.org<br>or connect with us on
-        <a href="https://www.w3schools.com">Facebook <img width="31" height="30" alt="Facebook" src=" http://cdn.firespring.com/images/8255f480-4dd6-4a23-98a4-c8288b10a018.png" itemprop="image">
-        </a>
-      </h6>
-    </div>
-
-  </div>
-  <div class="w3-row w3_center w3-content">
-    <div class="w3-content">
-      <p style="font-size: 12px">The official registration and financial information of The Arc of Clarion and Venango may be obtained from the PA Dept. of State by calling toll free within Pennsylvania, 1-800-732-0999. Registration does not imply endorsement. The Arc of Clarion
-        and Venango is a 501(c)(3) non-profit organization - contributions to which are tax deductible to the fullest extent permitted by law.</p>
-    </div>
-  </div>
-  <div class="w3-row w3_center">
-    <div class=" w3-content">
-      <a class="w3-quarter w3-bar-item">©The Arc of Clarion and Venango 2018</a>
-      <a class="w3-quarter w3-bar-item w3-button" style="text-decoration:none font-size:16px" href="https://www.facebook.com/TheArcPA" itemprop="url">Privacy Policy</a>
-      <a class="w3-quarter w3-bar-item w3-button" style="text-decoration:none" href="https://www.facebook.com/TheArcPA" itemprop="url">Terms and Conditions</a>
-      <a class="w3-quarter w3-bar-item">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-orange">w3.css</a></a>
-    </div>
-  </div>
-</footer>
-<!-- Ending of footer section -->
+<?php include("includes/footer.html");?>
 </body>
 </html>
