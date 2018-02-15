@@ -33,3 +33,4 @@ function myMap()
   });
   marker.setMap(map);
 }
+w3.includeHTML();
