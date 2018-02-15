@@ -53,5 +53,7 @@
 <!-- Ending of content -->
 
 <?php include("includes/footer.html");?>
+  
+<script src="myscripts.js"></script>
 </body>
 </html>
