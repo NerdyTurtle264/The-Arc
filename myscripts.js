@@ -51,3 +51,11 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
+
+function OverlayOn() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function OverlayOff() {
+  document.getElementById("overlay").style.display = "none";
+}
