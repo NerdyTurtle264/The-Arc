@@ -1,3 +1,8 @@
+window.onload = function () {
+  showDivs(slideIndex);
+  carousel();
+};
+
 function MobileDropFunc() {
   var x = document.getElementById("MobileNav");
   if (x.className.indexOf("w3-show") == -1) {
@@ -35,21 +40,49 @@ function myMap() {
 w3.includeHTML();
 
 var slideIndex = 1;
-showDivs(slideIndex);
+var continueSlides = true;
 
 function plusDivs(n) {
   showDivs(slideIndex += n);
 }
 
+function plusDivsStop(n) {
+  if (!continueSlides){
+    showDivsStop(slideIndex += n);
+  }
+  showDivs(slideIndex += n);
+  continueSlides = false;
+}
+
+function carousel() {
+  plusDivs(1);
+  if (continueSlides) {
+    setTimeout(carousel, 1000); // Change image every 3 seconds
+  }
+}
+
 function showDivs(n) {
+  if (continueSlides) {
+    var i;
+    var x = document.getElementsByClassName("header-slides");
+    if (n > x.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = x.length }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+  }
+}
+
+function showDivsStop(n) {
   var i;
   var x = document.getElementsByClassName("header-slides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
+  if (n > x.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = x.length }
   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+    x[i].style.display = "none";
   }
-  x[slideIndex-1].style.display = "block";  
+  x[slideIndex - 1].style.display = "block";
 }
 
 function OverlayOn() {
