@@ -57,7 +57,7 @@ function plusDivsStop(n) {
 function carousel() {
   plusDivs(1);
   if (continueSlides) {
-    setTimeout(carousel, 1000); // Change image every 3 seconds
+    setTimeout(carousel, 5000); // Change image every 5 seconds
   }
 }
 
